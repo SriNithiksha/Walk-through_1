@@ -32,6 +32,12 @@
     ],
    ];
 
+   function filterByAuthor(){
+    return 'gibberish';
+   }
+
+   filterByAuthor();
+
   ?>
   <ul>
     <?php foreach ($books as $book) : ?>
@@ -46,6 +52,9 @@
       <?php endif; ?>
       <?php endforeach; ?>
   </ul>
+  <p>
+    <?= filterByAuthor(); ?>
+  </p>
 </body>
 
 </html>

@@ -5,7 +5,9 @@
   </head>
   <body>
   <?php
-    echo "hello," . "universe";
+    $greeting = "hello";
+     
+    echo $greeting ." " . "universe";
     ?>
   </body>
 </html>

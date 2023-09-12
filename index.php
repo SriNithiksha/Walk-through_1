@@ -16,8 +16,11 @@
 </head>
 
 <body>
+<?php
+    $name = "PHP & MYSQL";
+  ?>
   <h1>
-    You have read "PHP & MYSQL"
+    You have read "<?php echo $name; ?>"
   </h1>
 </body>
 

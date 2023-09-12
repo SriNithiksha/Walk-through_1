@@ -15,16 +15,12 @@
    "Do androids dream of electric sheep",
    "The Langoliers",
    "Hail Mary",
-   ]
+   ];
 
   ?>
-  <ul>
-    <?php foreach ($books as $book) : ?> 
-    <li><?= $book ?></li>
-    <?php endforeach; ?>
-    
-  
-  </ul>
+  <p>
+    <?= $books[2] ?>
+  </p>
 </body>
 
 </html>

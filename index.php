@@ -7,7 +7,7 @@
   <?php
     $greeting = "hello";
      
-    echo "$greeting everybody";
+    echo '$greeting everybody';
     ?>
   </body>
 </html>

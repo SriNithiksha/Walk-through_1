@@ -11,7 +11,7 @@
 
   <?php
 
-   $books = [
+  $books = [
     [
       'name' => 'Do androids dream of electric sheep',
       'author' => 'Philip K. Dick',
@@ -27,34 +27,35 @@
     [
       'name' => 'The Martian',
       'author' => 'Andy Weir',
-      'releaseyear' =>2011,
+      'releaseyear' => 2011,
       'purchaseUrl' => 'http: //example.com'
     ],
-   ];
+  ];
 
-   function filterByAuthor(){
-    return 'gibberish';
-   }
+  function filterByAuthor($books)
+  {
+    $filteredBooks = [];
 
-   filterByAuthor();
+    foreach ($books as $book) {
+      if ($book['author'] === 'Andy Weir') {
+        $filteredBooks[] = $book;
+      }
+    }
 
+    return $filteredBooks;
+  }
   ?>
   <ul>
-    <?php foreach ($books as $book) : ?>
-      <?php if($book['author'] === 'Andy Weir') : ?>
-
-
+    <?php foreach (filterByAuthor($books) as $book): ?>
       <li>
-        <a href="<?= $book['purchaseUrl']?>">
-        <?= $book['name']; ?> (<?= $book['releaseyear'] ?>) - By <?= $book['author']?>
-    </a>
+        <a href="<?= $book['purchaseUrl'] ?>">
+          <?= $book['name']; ?> (<?= $book['releaseyear'] ?>) - By <?= $book['author'] ?>
+        </a>
       </li>
-      <?php endif; ?>
-      <?php endforeach; ?>
+
+    <?php endforeach; ?>
   </ul>
-  <p>
-    <?= filterByAuthor(); ?>
-  </p>
+
 </body>
 
 </html>
